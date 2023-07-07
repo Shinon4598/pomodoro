@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Open+Sans:ital,wght@1,300&family=Roboto:wght@100;300&family=Staatliches&display=swap');
+:root{
+    --gris-claro:rgb(240, 238, 238);
+    --gris:#c2c2c2;
+    --letras:#323232;
+}
+html{
+    box-sizing: border-box;
+}
+*{
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--gris-claro);
+}
+.pomodoro__tiempo{
+    height: 220px;
+}
+.pomodoro-contenedor{
+    width: 80%;
+    margin: 0 auto;
+    height: 90vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    color: var(--letras);
+}
+.pomodoro__botones{
+    display: flex;
+}
+.pomodoro__botones button{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.6rem;
+    border: none;
+    background-color: var(--gris);
+}
+.pomodoro__botones button:hover {
+    filter: brightness(0.9);
+    scale: 0.98;
+}
+.pomodoro-contenedor button img{
+    max-width: 80%;
+    max-height: 80%;
+    opacity: 0.8;
+} 
+.pomodoro_tarea-actual input{
+    padding: 0.7rem;
+    border: 1px solid var(--gris);
+    border-radius: 10px;
+}
+.lista{
+    text-align: center;
+}
+.progress {
+    display: block;
+    margin: 20px auto;
+    transform: rotate(-90deg); /* Rota el SVG -90 grados para que comience desde arriba */
+  }
+  
+  .background {
+    fill: none;
+    stroke: var(--gris);
+    stroke-width: 10;
+  }
+  
+  .fill {
+    fill: none;
+    stroke: red;
+    stroke-width: 10;
+    stroke-dasharray: 314; /* Perímetro del círculo: 2 * π * r */
+    stroke-dashoffset: 314; /* Iniciar con el círculo completo */
+    transition: stroke-dashoffset 0.5s ease;
+  }
+  
+.pomodoro__duracion{
+    width: 220px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.duracion-input{
+    width: 100px;
+    height: 30px;
+}
+.duracion__contenedor p{
+    margin: 5px;
+}

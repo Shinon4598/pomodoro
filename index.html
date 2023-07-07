@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Temporizador Pomodoro</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <div class="pomodoro-contenedor" id="pomodoro">
+    <h1>Temporizador Pomodoro</h1>
+    <div class="pomodoro__tiempo">
+      <svg class="progress" width="200" height="200" viewBox="0 0 120 120">
+        <circle class="background" cx="60" cy="60" r="50"></circle>
+        <circle class="fill" cx="60" cy="60" r="50"></circle>
+        <text x="50%" y="45%" text-anchor="middle" alignment-baseline="middle" font-size="24" transform="rotate(90 60 60)" dy="0.35em" id="tiempo"></text>
+      </svg>
+    </div>
+    <div class="pomodoro_tarea-actual">
+      <input type="text" id="nombre-tarea" class="tarea-actual__nombre" placeholder="Enter your task...">  
+    </div>
+    <div class="pomodoro__botones">
+      <button id="btn-iniciar" onclick="iniciarTemporizador()"><img src="/assets/img/tocar(1).png" alt="play"></button>
+      <button id="btn-reiniciar" onclick="reiniciarTemporizador()"><img src="/assets/img/forma-cuadrada-negra-redondeada.png" alt="restart"></button>
+      <button id="btn-pausa" onclick="pausado()"><img src="/assets/img/pausa(1).png" alt="pause"></button>
+    </div>
+    <div class="pomodoro__duracion">
+      <div class="duracion__contenedor">
+        <p>Work<br>duration</p>
+        <input class="duracion-input" id="duracion-trabajo" type="number" value="25">
+      </div>
+      <div class="duracion__contenedor">
+        <p>Break<br>duration</p>
+        <input class="duracion-input" id="duracion-descanso" type="number" value="5">
+      </div>
+    </div>
+    <div class="pomodoro__lista">
+      <div class="lista">
+        <h3>Your Sessions</h3>
+        <ul id="lista-tareas" class="lista-tareas">
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="/assets/js/index.js"> </script>
+  <div class="loader"></div>
+</body>
+</html>
